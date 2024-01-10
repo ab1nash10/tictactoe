@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500&family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: #111111;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  background-color: #443850;
+  height: 5rem;
+  font-size: 1.8rem;
+  padding: 1rem;
+  font-family: "Baloo Bhaina 2", sans-serif;
+  font-weight: 500;
+  & li {
+    list-style-type: none;
+  }
+}
+
+.game-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+}
+.box {
+  border: 2px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #c0c5c1;
+  }
+}
+
+.game-info {
+  font-size: 1.8rem;
+  padding: 0 3.4rem;
+  font-family: "Baloo Bhaina 2", sans-serif;
+}
+
+.info {
+  font-size: 1.4rem;
+}
+
+.imgBox img {
+  width: 0;
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+#reset {
+  cursor: pointer;
+  color: #111111;
+  background-color: #d3c2ce;
+  font-family: Consolas;
+  font-weight: 700;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0 0.4rem;
+  border-radius: 10px;
+  border: 2px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+
+  & .container {
+    order: 2;
+  }
+
+  &.game-info {
+    order: 1;
+  }
+}
+.grid-two--cols {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (width<=998px) {
+  h1 {
+    font-size: 80%;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+}
+
+@media (width<=556px) {
+  .imgBox img {
+    height: 9rem;
+  }
+  h1 {
+    font-size: 72%;
+  }
+}
